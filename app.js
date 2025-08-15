@@ -1,5 +1,4 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-const cont = 0;
 let amigos = [];
 /*Implementa una función para agregar amigos
 Desarrolla una función, que permita al usuario ingresar un nombre en el campo de texto y añadirlo a la lista de amigos creada anteriormente.
@@ -24,6 +23,7 @@ function agregarAmigo(){
 function limpiarCaja(){
     document.querySelector('#amigo').value = "";
 }
+
 
 /*
 Crea una función que recorra el array amigos y agregue cada nombre como un elemento <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos.
@@ -57,5 +57,7 @@ Mostrar el resultado: Actualizar el contenido del elemento de resultado utilizan
 function sortearAmigo(){
     let iRandom = Math.floor(Math.random() * amigos.length);
     console.log(amigos[iRandom])
-    document.getElementById('resultado').innerHTML += `<li>${amigos[iRandom]}</li>`;  
+    document.getElementById('resultado').innerHTML += `<li>El amigo secreto sorteado es: ${amigos[iRandom]}</li>`; 
+    const lista = document.querySelector('#listaAmigos');
+    lista.innerHTML = "";
 }
