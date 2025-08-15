@@ -18,15 +18,13 @@ function agregarAmigo(){
     if (amigo.trim() === "") alert("Por favor, inserte un nombre");       
     else amigos.push(amigo);
     limpiarCaja();
+    mostrarAmigos();
 }
 
 function limpiarCaja(){
     document.querySelector('#amigo').value = "";
 }
 
-function limpiarLista(){
-    document.querySelector('#listaAmigos') = "";
-}
 /*
 Crea una función que recorra el array amigos y agregue cada nombre como un elemento <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos.
 
