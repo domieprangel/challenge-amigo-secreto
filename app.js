@@ -13,9 +13,12 @@ Actualizar el array de amigos: Si el valor es válido, añadirlo al arreglo que 
 
 Limpiar el campo de entrada: Después de añadir el nombre, restablecer el campo de texto a una cadena vacía.*/
 function agregarAmigo(){
-    let amigo = document.querySelector('#amigo').value;
-    if (amigo.trim() === "") alert("Por favor, inserte un nombre");       
-    else amigos.push(amigo); 
+    let amigo = document.querySelector('#amigo').value.trim();
+    if (!amigo) {
+        alert("Por favor, inserte un nombre");
+        return;
+    }
+    amigos.push(amigo); 
     limpiarCaja();
     mostrarAmigos();
 }
@@ -40,8 +43,7 @@ Agregar elementos a la lista: Para cada amigo, crear un nuevo elemento de lista.
  */
 function mostrarAmigos(){
     const lista = document.querySelector('#listaAmigos');
-    lista.innerHTML = "";
-    amigos.forEach(amigo => {lista.innerHTML += `<li>${amigo}</li>`});
+    lista.innerHTML = amigos.map(amigo => `<li>${amigo}</li>`).join('');
 }
 /*Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos. Usa Math.random() y Math.floor() para obtener un índice aleatorio.
 
@@ -55,9 +57,16 @@ Obtener el nombre sorteado: Utilizar el índice aleatorio para acceder al nombre
 
 Mostrar el resultado: Actualizar el contenido del elemento de resultado utilizando document.getElementById()  e innerHTML para mostrar el amigo sorteado.*/
 function sortearAmigo(){
+    if (amigos.length === 0) {
+        alert("No hay amigos para sortear");
+        return;
+    }
+    // Elegir un índice aleatorio
     let iRandom = Math.floor(Math.random() * amigos.length);
-    console.log(amigos[iRandom])
-    document.getElementById('resultado').innerHTML += `<li>El amigo secreto sorteado es: ${amigos[iRandom]}</li>`; 
+    // Mostrar el resultado
+    document.getElementById('resultado').innerHTML = 
+        `<li>El amigo secreto sorteado es: ${amigos[iRandom]}</li>`;
+    // Limpiar la lista de amigos visibles
     const lista = document.querySelector('#listaAmigos');
     lista.innerHTML = "";
 }
