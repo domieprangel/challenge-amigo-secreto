@@ -88,11 +88,12 @@ body {
 }
 
 .button-container {
-    display: flex;          
-    justify-content: center; 
-    gap: 10px;              
-    width: 100%;           
-    max-width: 300px;   
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    max-width: 600px;
+    margin-top: 10px;  
 }
 
 /* Estilos de entrada de texto */
@@ -154,10 +155,11 @@ ul {
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .button-draw img {
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .button-draw:hover {
