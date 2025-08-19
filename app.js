@@ -4,6 +4,14 @@ function limpiarCaja() {
     document.querySelector('#amigo').value = '';
 }
 
+function limpiarLista(){
+    document.querySelector('#listaAmigos').innerHTML = '';
+}
+
+function escribeResultado(msj){
+    document.querySelector('#resultado').innerHTML = msj;
+}
+
 function mostrarAmigos() {
     const lista = document.querySelector('#listaAmigos');
     lista.innerHTML = amigos.map(amigo => `<li>${amigo}</li>`).join('');
@@ -28,7 +36,13 @@ function sortearAmigo() {
         return
     }
     let randomNum = Math.floor(Math.random() * amigos.length);
-    document.querySelector('#resultado').innerHTML = `<li>El amigo secreto sorteado es: ${amigos[randomNum]}</li>`;
-    const lista = document.querySelector('#listaAmigos');
-    lista.innerHTML = '';
+    escribeResultado(`<li>El amigo secreto sorteado es: ${amigos[randomNum]}</li>`);
+    limpiarLista();
+}
+
+function reiniciar() {
+    amigos = [];
+    limpiarCaja();
+    limpiarLista();
+    escribeResultado('');
 }
