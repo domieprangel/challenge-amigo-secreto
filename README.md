@@ -24,6 +24,11 @@ Aplicación web en JavaScript que permite gestionar una lista de amigos y realiz
      <p align="center">
        <img src="assets/alerta-caja-vacía.png" alt="Mensaje de alerta por caja vacía" width="300"/>
      </p>
+   - Si el nombre ya esrá en la lista, la app mostrará un mensaje de alerta:
+     
+     <p align="center">
+       <img src="assets/alerta-nombre-duplicado.png" alt="Mensaje de alerta por caja vacía" width="300"/>
+     </p>
    - La lista de participantes se actualizará automáticamente debajo del input:
 
      <p align="center">
@@ -31,7 +36,7 @@ Aplicación web en JavaScript que permite gestionar una lista de amigos y realiz
      </p>
 
 2. **Realizar el sorteo del amigo secreto**  
-   - Haz clic en el botón **Sorteo** o **Seleccionar amigo secreto**.  
+   - Haz clic en el botón **Sortear amigo**.  
    - La app elegirá un nombre al azar de la lista de participantes.  
    - Si la lista de amigos está vacía, la app mostrará mensaje de alerta:
 
@@ -44,6 +49,8 @@ Aplicación web en JavaScript que permite gestionar una lista de amigos y realiz
        <img src="assets/sorteado.png" alt="Amigo Secreto sorteado" width="300"/>
      </p>
 
+3. **Reiniciar el sorteo**  
+   - Haz clic en el botón **Reiniciar** para volver a iniciar la lista de amigos o empezar de nuevo el sorteo.
 ---
 
 ## Tecnologías usadas
