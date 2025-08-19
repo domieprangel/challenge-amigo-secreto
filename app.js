@@ -15,7 +15,9 @@ function agregarAmigo() {
         alert("Por favor, inserte un nombre.");
         return
     }
-    amigos.push(amigo);
+    if (!amigos.includes(amigo)){
+        amigos.push(amigo);
+    }else alert("Ese nombre ya se registró.");
     limpiarCaja();
     mostrarAmigos();
 }
