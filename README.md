@@ -63,8 +63,7 @@ Aplicación web en JavaScript que permite gestionar una lista de amigos y realiz
 
 ## Mejoras por implementar
 
-- Evitar duplicados en la lista de participantes.  
-- Agregar botón de reinicio sin recargar la página.  
+- Sortear hasta que se acabe la lista de amigos
 
 ---
 
