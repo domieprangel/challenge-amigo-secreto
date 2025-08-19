@@ -19,3 +19,14 @@ function agregarAmigo() {
     limpiarCaja();
     mostrarAmigos();
 }
+
+function sortearAmigo() {
+    if (amigos.length == 0){
+        alert("No hay amigos para sortear. Escribe el primero.")
+        return
+    }
+    let randomNum = Math.floor(Math.random() * amigos.length);
+    document.querySelector('#resultado').innerHTML = `<li>El amigo secreto sorteado es: ${amigos[randomNum]}</li>`;
+    const lista = document.querySelector('#listaAmigos');
+    lista.innerHTML = '';
+}
