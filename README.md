@@ -9,7 +9,7 @@ Aplicación web en JavaScript que permite gestionar una lista de amigos y realiz
 ## Demostración
 
 <p align="center">
-  <img src="assets/interfaz.png" alt="Interfaz de la app" width="400"/>
+  <img src="assets/interfaz.png" alt="Interfaz de la app" width="800"/>
 </p>
 
 ---
